@@ -1,0 +1,20 @@
+/* Design System */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define Custom Properties */
+:root {
+    /* Colors */
+    --main-accent: linear-gradient(45deg, rgb(255, 197, 147), rgb(188, 113, 152), rgb(90, 119, 255));
+    --pure-black: rgb(0,0,0);
+    --light-grey: #dfdfdf;
+    --pure-white: #ffffff;
+}
+
+.header {
+    background-color: var(--pure-black);
+}
+
