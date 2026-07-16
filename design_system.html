@@ -4,112 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design_system.css">
+    <link rel="stylesheet" href="compositions.css">
     <title>Design System</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a class="nav_logo" href="index.html"><img src="assets/shared/desktop/logo.svg" alt=""></a>
-            <ul class="nav_list">
-                <li class="nav_item"><a href="#">Design System</a></li>
+    <header class="bg-black">
+        <nav class="nav center cluster">
+            <a href="#">
+                <div class="cluster nav_logo">
+                    <div class="triangle"></div>
+                    <p>PHOTOSNAP</p>
+                </div>
+            </a>
+            <ul class="cluster nav_list uppercase">
+                <li class="nav_item fs-32"><a href="#">Design System</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <section>
-            <h2><span>01</span> Colors</h2>
-            <div>
-                <div class="color">Main Accent</div>
-                <h2>Main Accent</h2>
-                <ul> HEX / RGB / HSL :
-                    <li>#FFC593, rgb(255, 197, 147), 28°, 100%, 79%</li>
-                    <li>#BC7198, rgb(188, 113, 152), 329°, 36%, 59%</li>
-                    <li>#5A77FF, rgb(90, 119, 255) 229°, 100%, 67%</li>
-                </ul>
+    <main class="main center stack">
+        <section class="section stack">
+            <header>
+                <h2 class="numbered-title"><span>01</span> Colors</h2>
+            </header>
+            <div class="cart-list">
+                <div class="cart cart-horizontal">
+                    <div class="color bg-primary"></div>
+                    <div class="content">
+                        <h3>Main Accent</h3>
+                        <ul> HEX / RGB / HSL :
+                            <li>#FFC593, rgb(255, 197, 147), 28°, 100%, 79%</li>
+                            <li>#BC7198, rgb(188, 113, 152), 329°, 36%, 59%</li>
+                            <li>#5A77FF, rgb(90, 119, 255) 229°, 100%, 67%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="color"></div>
+                    <div>
+                        <h3>Pure Black</h3>
+                        <ul>
+                            <li>HEX : #000000</li>
+                            <li>RGB : rgb(0, 0, 0)</li>
+                            <li>HSL : hsl(0°, 0%, 0%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="color bg-grey"></div>
+                    <div>
+                        <h3>Light Grey</h3>
+                        <ul>
+                            <li>HEX : #DFDFDF</li>
+                            <li>RGB : rgb(223, 223, 223)</li>
+                            <li>HSL : hsl(0°, 0%, 87%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="color bg-white"></div>
+                    <div>
+                        <h3>Pure White</h3>
+                        <ul>
+                            <li>HEX : #ffffff</li>
+                            <li>RGB : rgb(255, 255, 255)</li>
+                            <li>HSL : hsl(0°, 0%, 100%)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div>
-                <div class="color">Pure Black</div>
-                <h2>Pure Black</h2>
-                <ul>
-                    <li>HEX : #000000</li>
-                    <li>RGB : rgb(0, 0, 0)</li>
-                    <li>HSL : hsl(0°, 0%, 0%)</li>
-                </ul>
-            </div>
-            <div>
-                <div class="color">Light Grey</div>
-                <h3>Light Grey</h3>
-                <ul>
-                    <li>HEX : #DFDFDF</li>
-                    <li>RGB : rgb(223, 223, 223)</li>
-                    <li>HSL : hsl(0°, 0%, 87%)</li>
-                </ul>
-            </div>
-            <div>
-                <div class="color">Pure White</div>
-                <h2>Pure White</h2>
-                <ul>
-                    <li>HEX : #ffffff</li>
-                    <li>RGB : rgb(255, 255, 255)</li>
-                    <li>HSL : hsl(0°, 0%, 100%)</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2><span>02</span> Typography</h2>
-            <h3>Font Family</h3>
-            <div>
-                <h2>DM Sans</h2>
-                <p>a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z !@#$%^&*()</p>
-            </div>
-            <hr>
-            <div>
-                <div class="heading">
-                    <h2>Headings</h2>
-                    <div>
-                        <small>H1/H2 (large); 40px; 48px line; 4.17 Character</small>
-                        <h1>DM SANS BOLD</h1>
-                    </div>
-                    <div>
-                        <small>H2; 24px; 25px line; 0 Character</small>
-                        <h2>DM Sans Bold</h2>
-                    </div>
-                    <div>
-                        <small>H3; 18px; 25px line; 0 Character</small>
-                        <h3>DM Sans Bold</h3>
-                    </div>
-                    <div>
-                        <small>H4; 12px; 16px line; 2 Character</small>
-                        <h4>DM SANS BOLD</h4>
-                    </div>
+        <section class="section stack">
+            <h2 class="numbered-title"><span>02</span> Typography</h2>
+            <div class="stack">
+                <h3 class="title">Font Family</h3>
+                <div class="switcher">
+                    <h2>DM Sans</h2>
+                    <p><span class="uppercase">a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z</span> !@#$%^&*()</p>
                 </div>
-                <div class="body">
-                    <small>Body; DM Sans Regular; 15px; 25px line; 0 Character</small>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nun.</p>
+                <hr>
+                <div class="switcher">
+                    <div class="headings stack">
+                        <h2>Headings</h2>
+                        <div>
+                            <small>H1/H2 (large); 40px; 48px line; 4.17 Character</small>
+                            <h1>DM SANS BOLD</h1>
+                        </div>
+                        <div>
+                            <small>H2; 24px; 25px line; 0 Character</small>
+                            <h3>DM Sans Bold</h3>
+                        </div>
+                        <div>
+                            <small>H3; 18px; 25px line; 0 Character</small>
+                            <h4>DM Sans Bold</h4>
+                        </div>
+                        <div>
+                            <small>H4; 12px; 16px line; 2 Character</small>
+                            <h5>DM SANS BOLD</h5>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <h2>Body</h2>
+                        <small>Body; DM Sans Regular; 15px; 25px line; 0 Character</small>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nun.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section>
-            <h2><span>03</span> Buttons</h2>
-            <div>
-                <button>Button 1</button>
-                <p>Normal</p>
+
+        <section class="section buttons stack">
+            <h2 class="numbered-title"><span>03</span> Buttons</h2>
+            <div class="stack">
+                <div class="cluster">
+                    <div class="cluster buttons-container">
+                        <button>Button 1</button>
+                        <p>Normal</p>
+                    </div>
+                    <div class="cluster buttons-container">
+                        <button>Button 1</button>
+                        <p>Hover</p>
+                    </div>
+                </div>
+                <div class="cluster">
+                    <div class="cluster buttons-container">
+                        <button>Button 2</button>
+                        <p>Normal</p>
+                    </div>
+                    <div class="cluster buttons-container">
+                        <button>Button 2</button>
+                        <p>Hover</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button>Button 1</button>
-                <p>Hover</p>
-            </div>
-            <div>
-                <button>Button 2</button>
-                <p>Normal</p>
-            </div>
-            <div>
-                <button>Button 2</button>
-                <p>Hover</p>
-            </div>   
         </section>
     </main>
+
+    <div class="bg-black clr-white">
+        <footer class="center buttons footer">
+            <div class="stack">
+                <div class="cluster">
+                    <div class="cluster buttons-container">
+                        <button>Button 1</button>
+                        <p>Normal</p>
+                    </div>
+                    <div class="cluster buttons-container">
+                        <button>Button 1</button>
+                        <p>Hover</p>
+                    </div>
+                </div>
+                <div class="cluster">
+                    <div class="cluster buttons-container">
+                        <button>Button 2</button>
+                        <p>Normal</p>
+                    </div>
+                    <div class="cluster buttons-container">
+                        <button>Button 2</button>
+                        <p>Hover</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
