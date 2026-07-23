@@ -152,6 +152,7 @@ h1 {
 
 .footer {
     --stack-gap: 2rem;
+    padding-block: 3rem;
 }
 
 .section hr {
@@ -196,22 +197,6 @@ h1 {
 
 .numbered-title span {
     color: var(--light-black);
-}
-
-.cart-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.cart {
-    display: flex;
-    gap: 25px;
-    flex-direction: column;
-}
-
-.cart-horizontal {
-    flex-direction: row;
 }
 
 .color {
@@ -304,8 +289,80 @@ button[data-style="text"]::after,
     background: linear-gradient(90deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
 }
 
-.footer {
-    padding-block: 3rem;
+.cart-container {
+    gap: 0;
+}
+
+.cart {
+    height: 500px;
+    justify-content: end;
+    padding: 40px;
+    gap: 0;
+    color: white;
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0.27%, rgba(0, 0, 0, 0.66) 100%),
+        var(--cart-image);
+    background-size: 100% 350px, cover;
+    background-position: bottom, center ;
+    background-repeat: no-repeat;
+}
+
+.mountains {
+    --cart-image: url(assets/stories/desktop/mountains.jpg);
+}
+.architecturals {
+    --cart-image: url(assets/stories/desktop/architecturals.jpg);
+}
+.days-voyage {
+    --cart-image: url(assets/stories/desktop/18-days-voyage.jpg);
+}
+.world-tour {
+    --cart-image: url(assets/stories/desktop/world-tour.jpg);
+}
+.cityscapes {
+    --cart-image: url(assets/stories/desktop/cityscapes.jpg);
+}
+.somwarpet {
+    --cart-image: url(assets/stories/desktop/somwarpet.jpg);
+}
+.behind-the-waves {
+    --cart-image: url(assets/stories/desktop/behind-the-waves.jpg);
+}
+.trip-to-nowhere {
+    --cart-image: url(assets/stories/desktop/trip-to-nowhere.jpg);
+}
+.king-on-africa {
+    --cart-image: url(assets/stories/desktop/king-on-africa.jpg);
+}
+.running-free {
+    --cart-image: url(assets/stories/desktop/running-free.jpg);
+}
+.rage-of-the-sea {
+    --cart-image: url(assets/stories/desktop/rage-of-the-sea.jpg);
+}
+.moon-of-appalacia {
+    --cart-image: url(assets/stories/desktop/moon-of-appalacia.jpg);
+}
+.dark-forest {
+    --cart-image: url(assets/stories/desktop/dark-forest.jpg);
+}
+.milky-way {
+    --cart-image: url(assets/stories/desktop/milky-way.jpg);
+}
+.calm-waters {
+    --cart-image: url(assets/stories/desktop/calm-waters.jpg);
+}
+.unforeseen-corners {
+    --cart-image: url(assets/stories/desktop/unforeseen-corners.jpg);
+}
+.land-of-dreams {
+    --cart-image: url(assets/stories/desktop/land-of-dreams.jpg);
+}
+
+
+
+.cart > hr {
+    margin-block: 16px 20px;
 }
 
 small {
@@ -376,4 +433,8 @@ small {
 
 .gap-45 {
     gap: 45px;
+}
+
+.gap-4 {
+    gap: 4px;
 }
