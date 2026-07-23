@@ -10,54 +10,61 @@
 <body>
     <!-- Header -->
     <header>
-    <nav>
-        <a href="index.html"><img src="assets/shared/desktop/logo.svg" alt=""></a>
-        <ul>
-            <li><a href="stories.html">Stories</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-        </ul>
-        <a href="#">Get an invite</a>
-    </nav>
+        <nav class="nav center cluster" role="navigation" aria-label="header-navigation">
+            <a href="index.html"><img src="assets/shared/desktop/logo.svg" alt=""></a>
+            <ul class="nav_list cluster">
+                <li class="nav_item"><a href="stories.html">Stories</a></li>
+                <li class="nav_item"><a href="features.html">Features</a></li>
+                <li class="nav_item"><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <a class="bg-black btn" href="#">Get an invite</a>
+        </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
-        <div>
+    <main class="main">
+        <div class="switcher panel">
             <!-- Left Desktop -->
-            <section>
-                <h2>Create and share your photo Stories</h2>
-                <p>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
-                <a href="#">Get an Invite</a>
+            <section class="stack bg-black panel_description gap-45">
+                <div class="stack gap-21">
+                    <h2>Create and share your photo Stories</h2>
+                    <p>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
+                </div>
+                <a class="btn" data-style="text" href="#">Get an Invite</a>
             </section>
 
             <!-- Right Desktop -->
                 <!-- Yet to decide right tag to use -->
-            <div>
-                <img src="assets/home/desktop/create-and-share.jpg" alt="Image of a man standing with a camera in his hand">
+            <div class="panel_img">
+                <img src="assets/home/desktop/create-and-share.jpg" alt="A man standing with a camera in his hand">
             </div>
         </div>
 
         <!-- Section 2 -->
-        <div>
-            <div>
+        <div class="panel switcher" data-order="inverted">
+            <section class="stack panel_description gap-45">
+                <div class="stack gap-21">
+                    <h2>Beautiful stories every time</h2>
+                    <p>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from  other networks. Then share your story with everyone.</p>
+                </div>
+                <a class="btn" data-style="text" href="stories.html">View the stories</a>
+            </section>
+
+            <div class="panel_img">
                 <img src="assets/home/desktop/beautiful-stories.jpg" alt="A studying desk with a computer and exercice book and books in a small collection of books">
             </div>
-            <section>
-            <h2>Beautiful stories every time</h2>
-            <p>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from  other networks. Then share your story with everyone.</p>
-            <button>View the stories</button>
-            </section>
         </div>
 
         <!-- Section 3 -->
-        <div>
-            <section>
-                <h1>Designed for everyone</h1>
-                <p>Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.</p>
-                <button>View the stories</button>
+        <div class="panel switcher">
+            <section class="stack panel_description gap-45">
+                <div class="stack gap-21">
+                    <h1>Designed for everyone</h1>
+                    <p>Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.</p>
+                </div>
+                <a class="btn" data-style="text" href="stories.html">View the stories</a>
             </section>
-            <div>
+            <div class="panel_img">
                 <img src="assets/home/desktop/designed-for-everyone.jpg" alt="A amn standing in a dark background holding a pro camera">
             </div>
         </div>
