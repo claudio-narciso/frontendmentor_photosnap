@@ -21,7 +21,7 @@
     --fs-custom: 2rem;
 }
 
-.fs-xl {
+.h-xl {
     font-size: var(--fs-xl);
     line-height: 48px;
     letter-spacing: 4.17px;
@@ -29,19 +29,19 @@
     text-transform: uppercase;
 }
 
-.fs-lg {
+.h-lg {
     font-size: var(--fs-lg);
     line-height: 25px;
     font-weight: 700;
 }
 
-.fs-md {
+.h-md {
     font-size: var(--fs-md);
     line-height: 25px;
     font-weight: 700;
 }
 
-.fs-sm {
+.h-sm {
     font-size: var(--fs-sm);
     line-height: 16px;
     letter-spacing: 2px;
@@ -49,23 +49,28 @@
     text-transform: uppercase;
 }
 
-.fs-general {
+.h-general {
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
 }
 
-.fs-32 {
+.h-32 {
     font-size: var(--fs-custom);
     line-height: 48px;
     letter-spacing: 3.33px;
     font-width: 700;
 }
 
-.fs-20 {
+.h-20 {
     font-size: 20px;
     line-height: 32px;
+}
+
+.fs-13 {
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .fw-bold {
@@ -148,11 +153,6 @@ h1 {
 }
 .section {
     --stack-gap: 2rem;
-}
-
-.footer {
-    --stack-gap: 2rem;
-    padding-block: 3rem;
 }
 
 .section hr {
@@ -264,6 +264,7 @@ button[data-style="text"]::after,
 .nav {
     padding-block: var(--nav-padding-block, 1rem);
     justify-content: space-between;
+    --separation-gap: var(--nav-padding-block);
 }
 
 .nav_item:hover {
@@ -274,26 +275,29 @@ button[data-style="text"]::after,
     position: relative;
 }
 
-.with-bar:hover {
-    color: var(--light-black);
-    background-color: red;
-}
-
 .with-bar::before {
     content: "";
     position: absolute;
-    top: calc(-1 * var(--nav-padding-block));
+    top: calc(-1 * var(--separation-gap, 0));
     left: 0;
     width: 100%;
     height: 6px;
     background: linear-gradient(90deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
 }
 
-.cart-container {
+.with-bar[data-direction="vertical"]::before {
+    top: 0;
+    left: calc(-1 * var(--separation-gap, 0));
+    height: 100%;
+    width: 6px;
+    background: linear-gradient(27deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+}
+
+.card-container {
     gap: 0;
 }
 
-.cart {
+.card {
     height: 500px;
     justify-content: end;
     padding: 40px;
@@ -301,73 +305,85 @@ button[data-style="text"]::after,
     color: white;
     background-image:
         linear-gradient(180deg, rgba(0, 0, 0, 0) 0.27%, rgba(0, 0, 0, 0.66) 100%),
-        var(--cart-image);
+        var(--card-image);
     background-size: 100% 350px, cover;
     background-position: bottom, center ;
     background-repeat: no-repeat;
 }
 
 .mountains {
-    --cart-image: url(assets/stories/desktop/mountains.jpg);
+    --card-image: url(assets/stories/desktop/mountains.jpg);
 }
 .architecturals {
-    --cart-image: url(assets/stories/desktop/architecturals.jpg);
+    --card-image: url(assets/stories/desktop/architecturals.jpg);
 }
 .days-voyage {
-    --cart-image: url(assets/stories/desktop/18-days-voyage.jpg);
+    --card-image: url(assets/stories/desktop/18-days-voyage.jpg);
 }
 .world-tour {
-    --cart-image: url(assets/stories/desktop/world-tour.jpg);
+    --card-image: url(assets/stories/desktop/world-tour.jpg);
 }
 .cityscapes {
-    --cart-image: url(assets/stories/desktop/cityscapes.jpg);
+    --card-image: url(assets/stories/desktop/cityscapes.jpg);
 }
 .somwarpet {
-    --cart-image: url(assets/stories/desktop/somwarpet.jpg);
+    --card-image: url(assets/stories/desktop/somwarpet.jpg);
 }
 .behind-the-waves {
-    --cart-image: url(assets/stories/desktop/behind-the-waves.jpg);
+    --card-image: url(assets/stories/desktop/behind-the-waves.jpg);
 }
 .trip-to-nowhere {
-    --cart-image: url(assets/stories/desktop/trip-to-nowhere.jpg);
+    --card-image: url(assets/stories/desktop/trip-to-nowhere.jpg);
 }
 .king-on-africa {
-    --cart-image: url(assets/stories/desktop/king-on-africa.jpg);
+    --card-image: url(assets/stories/desktop/king-on-africa.jpg);
 }
 .running-free {
-    --cart-image: url(assets/stories/desktop/running-free.jpg);
+    --card-image: url(assets/stories/desktop/running-free.jpg);
 }
 .rage-of-the-sea {
-    --cart-image: url(assets/stories/desktop/rage-of-the-sea.jpg);
+    --card-image: url(assets/stories/desktop/rage-of-the-sea.jpg);
 }
 .moon-of-appalacia {
-    --cart-image: url(assets/stories/desktop/moon-of-appalacia.jpg);
+    --card-image: url(assets/stories/desktop/moon-of-appalacia.jpg);
 }
 .dark-forest {
-    --cart-image: url(assets/stories/desktop/dark-forest.jpg);
+    --card-image: url(assets/stories/desktop/dark-forest.jpg);
 }
 .milky-way {
-    --cart-image: url(assets/stories/desktop/milky-way.jpg);
+    --card-image: url(assets/stories/desktop/milky-way.jpg);
 }
 .calm-waters {
-    --cart-image: url(assets/stories/desktop/calm-waters.jpg);
+    --card-image: url(assets/stories/desktop/calm-waters.jpg);
 }
 .unforeseen-corners {
-    --cart-image: url(assets/stories/desktop/unforeseen-corners.jpg);
+    --card-image: url(assets/stories/desktop/unforeseen-corners.jpg);
 }
 .land-of-dreams {
-    --cart-image: url(assets/stories/desktop/land-of-dreams.jpg);
+    --card-image: url(assets/stories/desktop/land-of-dreams.jpg);
 }
 
-
-
-.cart > hr {
+.card > hr {
     margin-block: 16px 20px;
+}
+
+.card2 {
+    align-items: center;
+    text-align: center;
+
+    & .image-box {
+        display: grid;
+        place-items: center;
+        height: 72px;
+    }
+}
+
+.cards2-container {
+    padding-block: 120px;
 }
 
 small {
     color: rgb(from var(--pure-black) r g b / 0.5);
-    padding-block-end: .5rem;
 }
 
 .panel {
@@ -375,10 +391,13 @@ small {
 }
 
 .panel_description {
-    padding: 10.8rem 7rem;
+    padding-block: 10.8rem;
+    --panel_desc-inline-padding: 7rem;
+    padding-inline: var(--panel_desc-inline-padding);
     height: initial;
     text-align: left;
     flex-grow: 1;
+    --separation-gap: var(--panel_desc-inline-padding);
 
     & h1, h2 {
         font-size: var(--fs-xl);
@@ -398,6 +417,19 @@ small {
     order: 2;
 }
 
+.footer {
+    --nav-padding-block: 0;
+    --stack-gap: 2rem;
+    padding-block: 4rem;
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+}
+
+.footer-content {
+    justify-content: space-between;
+    height: 122px;
+}
+
 /* Utility classes */
 
 .bg-black {
@@ -411,16 +443,19 @@ small {
 }
 
 .bg-primary {
-    background-image: var(--main-accent);
-
+    background-color: var(--main-accent);
 }
 
 .clr-white {
     color: var(--pure-white);
 }
 
+.clr-light-white {
+    color: rgb(from var(--pure-white) r g b / .6);
+}
+
 .clr-light-black {
-    color: var(--light-black);
+    color: rgb(from var(--pure-black) r g b / .6);
 }
 
 .uppercase {
@@ -437,4 +472,28 @@ small {
 
 .gap-4 {
     gap: 4px;
+}
+
+.gap-48 {
+    gap: 48px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-109 {
+    gap: 109px;
+}
+
+.gap-0 {
+    gap: 0;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.stretch {
+    align-items: stretch;
 }
